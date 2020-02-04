@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+{% block body_block %}
+<h1 style="color: #014505;font-family: Sigmar One;font-size: 4em;"><b style="text-decoration: underline";>All Notes : </b></h1><br><br><br>
+{% for post in post_list %}
+  <div class="container" style="background-color: #a10546;font-family: Lobster;color: white;border-style: outset;border: 8px solid #3d0229;">
+      <div class="card img-fluid" style="width:500px">
+        <div class="card-img-overlay">
+            <h1 style="font-size: 3.5em;" class="card-title">{{post.title}}</h1>
+            <p style="font-size: 1.5em;" class="card-text">{{post.create_date}}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Open/Edit</a>
+            <a href="{% url 'post_remove' pk=post.pk %}" class="btn btn-primary">Remove</a>
+        </div>
+      </div>
+    </div><br><br>
+  {% endfor %}
+
+{% endblock %}

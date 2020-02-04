@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% block body_block %}
+
+<div class="container" style="background-color: #046156;font-family: Sigmar One;color: white;">
+    <div class="card">
+      <div class="card-img-overlay">
+        <h1 style="font-size: 5em;" class="card-title"><b style="text-decoration: underline;">Title</b>  :  {{post.title}}</h1><br><br>
+        <p style="font-size: 2.5em;"  class="card-text"><b style="text-decoration: underline;">Text</b style="text-decoration: underline;">  : <br>{{post.text}}</p style="font-size: 5em;">
+        <br><br>
+        <p style="font-size: 2.5em;"  class="card-text"><b style="text-decoration: underline;">Date Created</b style="text-decoration: underline;">  :  {{post.create_date}}</p style="font-size: 5em;">
+        <br><br>
+        <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-primary">Edit</a>
+        <a href="{% url 'post_remove' pk=post.pk %}" class="btn btn-primary">Remove</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

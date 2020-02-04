@@ -14,11 +14,11 @@
     <nav class="navbar navbar-inverse">
         <div class="container">
           <div class="navbar-header">
-            <a style="font-size: 4em;" class="navbar-brand" href="{% url 'index' %}">ToDo</a>
+            <a style="font-size: 4em;" class="navbar-brand" href="{% url 'post_list' %}">ToDo</a>
           </div>
           <ul class="nav navbar-nav">
-            <li style="font-size: 2em;"  class="active"><a href="{% url 'index' %}">Home</a></li style="font-size: 4em;">
-            <li style="font-size: 2em;" ><a href="#">Add</a></li style="font-size: 4em;">
+            <li style="font-size: 2em;"  class="active"><a href="{% url 'post_list' %}">Home</a></li style="font-size: 4em;">
+            <li style="font-size: 2em;" ><a href="{% url 'post_new' %}">Add</a></li style="font-size: 4em;">
           </ul>
         </div>
       </nav>
